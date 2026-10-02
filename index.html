@@ -4,11 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Муслимхон Гуломов — официальный личный сайт, биография, достижения, образование, проекты и личная информация.">
+    <title>Муслимхон Гуломов — официальный личный сайт</title>
+
+    <meta name="description" content="Муслимхон Гуломов — официальный личный сайт, биография, достижения, образование, проекты и профессиональная деятельность.">
     <meta name="keywords" content="Муслимхон Гуломов, Муслимхон Гуломов Уктамхонович, Muslimkhon Gulomov, официальный сайт, Алмалык, Ташкент, EkoLife, бокс, спортсмен">
     <meta name="author" content="Муслимхон Гуломов">
-<meta name="robots" content="index, follow">
-<title>Муслимхон Гуломов — официальный личный сайт</title>
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://muslimxon-gulomov.github.io/">
+
+    <meta property="og:title" content="Муслимхон Гуломов — официальный личный сайт">
+    <meta property="og:description" content="Официальный личный сайт Муслимхона Гуломова — биография, достижения, образование и профессиональная деятельность.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://muslimxon-gulomov.github.io/">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Муслимхон Гуломов",
+        "url": "https://muslimxon-gulomov.github.io/",
+        "jobTitle": "Менеджер по продажам",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "EkoLife"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Алмалык",
+            "addressCountry": "UZ"
+        }
+    }
+    </script>
 
     <style>
         * {
@@ -17,14 +44,30 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --bg: #070907;
+            --bg-light: #0d110e;
+            --card: #101510;
+            --card-hover: #141b15;
+            --green: #69d96f;
+            --green-light: #8aef90;
+            --text: #f2f5f2;
+            --muted: #9ba49d;
+            --border: rgba(105, 217, 111, 0.16);
+            --border-light: rgba(255, 255, 255, 0.08);
+        }
+
         html {
             scroll-behavior: smooth;
         }
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #080b0d;
-            color: #ffffff;
+            background:
+                radial-gradient(circle at 80% 10%, rgba(105, 217, 111, 0.08), transparent 28%),
+                radial-gradient(circle at 10% 70%, rgba(105, 217, 111, 0.05), transparent 25%),
+                var(--bg);
+            color: var(--text);
             line-height: 1.6;
         }
 
@@ -34,7 +77,7 @@
         }
 
         .container {
-            width: min(1100px, 90%);
+            width: min(1120px, 92%);
             margin: 0 auto;
         }
 
@@ -44,45 +87,50 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(8, 11, 13, 0.92);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+            background: rgba(7, 9, 7, 0.88);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border-light);
         }
 
         .nav-inner {
-            height: 72px;
+            min-height: 70px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 25px;
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: 900;
-            letter-spacing: 2px;
-            color: #71d44b;
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        .logo span {
+            color: var(--green);
         }
 
         .nav-links {
             display: flex;
+            align-items: center;
             gap: 28px;
             list-style: none;
         }
 
         .nav-links a {
-            color: #b7b7b7;
+            color: #cbd0cc;
             font-size: 14px;
-            transition: 0.3s;
+            transition: 0.25s;
         }
 
         .nav-links a:hover {
-            color: #71d44b;
+            color: var(--green);
         }
 
         /* HERO */
 
         .hero {
-            min-height: 90vh;
+            min-height: 88vh;
             display: flex;
             align-items: center;
             position: relative;
@@ -94,367 +142,474 @@
             position: absolute;
             width: 500px;
             height: 500px;
-            background: #71d44b;
-            opacity: 0.08;
+            right: -180px;
+            top: 80px;
             border-radius: 50%;
-            filter: blur(100px);
-            right: -150px;
-            top: 100px;
+            background: rgba(105, 217, 111, 0.08);
+            filter: blur(80px);
         }
 
         .hero-content {
             position: relative;
-            z-index: 2;
             max-width: 850px;
+            padding: 90px 0;
         }
 
         .badge {
-            display: inline-block;
-            padding: 8px 15px;
-            border: 1px solid rgba(113, 212, 75, 0.4);
-            border-radius: 30px;
-            color: #71d44b;
-            font-size: 13px;
-            margin-bottom: 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 13px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            color: var(--green-light);
+            background: rgba(105, 217, 111, 0.06);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
         }
 
-        .hero h1 {
-            font-size: clamp(55px, 9vw, 110px);
+        .badge::before {
+            content: "✦";
+            font-size: 12px;
+        }
+
+        h1 {
+            font-size: clamp(54px, 9vw, 105px);
             line-height: 0.95;
             letter-spacing: -5px;
+            font-weight: 900;
             margin-bottom: 30px;
         }
 
-        .hero h1 span {
-            color: #71d44b;
+        h1 span {
+            color: var(--green);
         }
 
-        .hero p {
-            color: #a9abad;
-            font-size: 20px;
-            max-width: 700px;
+        .hero-description {
+            max-width: 680px;
+            color: var(--muted);
+            font-size: 19px;
+            line-height: 1.7;
             margin-bottom: 35px;
         }
 
         .buttons {
             display: flex;
-            gap: 15px;
             flex-wrap: wrap;
+            gap: 12px;
         }
 
         .btn {
-            display: inline-block;
-            padding: 14px 24px;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 22px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.25s;
         }
 
         .btn-primary {
-            background: #71d44b;
-            color: #071006;
+            background: var(--green);
+            color: #071007;
         }
 
         .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(113,212,75,0.2);
+            background: var(--green-light);
+            transform: translateY(-2px);
         }
 
         .btn-secondary {
-            border: 1px solid #333;
-            color: #fff;
+            border: 1px solid var(--border-light);
+            color: #d8ddd9;
+            background: rgba(255, 255, 255, 0.025);
         }
 
         .btn-secondary:hover {
-            border-color: #71d44b;
-            color: #71d44b;
+            border-color: var(--green);
+            color: var(--green);
+            transform: translateY(-2px);
         }
 
-        /* SECTIONS */
+        /* GENERAL SECTIONS */
 
         section {
-            padding: 110px 0;
-            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 105px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.045);
         }
 
         .section-label {
-            color: #71d44b;
-            text-transform: uppercase;
+            color: var(--green);
+            font-size: 11px;
+            font-weight: 800;
             letter-spacing: 3px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         h2 {
-            font-size: clamp(35px, 5vw, 60px);
+            font-size: clamp(35px, 5vw, 58px);
             line-height: 1;
-            margin-bottom: 50px;
+            letter-spacing: -2px;
+            margin-bottom: 15px;
+        }
+
+        .section-intro {
+            max-width: 700px;
+            color: var(--muted);
+            font-size: 16px;
+            margin-bottom: 45px;
         }
 
         /* ABOUT */
 
+        .about-description {
+            position: relative;
+            max-width: 850px;
+            margin: 15px 0 42px;
+            padding-left: 26px;
+            color: #b8c0ba;
+            font-size: 17px;
+            line-height: 1.75;
+        }
+
+        .about-description::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--green);
+            font-size: 18px;
+        }
+
         .about-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
         }
 
         .info-card {
-            background: #0d1113;
-            border: 1px solid #1b2022;
-            border-radius: 14px;
+            min-height: 145px;
             padding: 25px;
+            background: linear-gradient(145deg, rgba(255,255,255,0.035), rgba(255,255,255,0.012));
+            border: 1px solid var(--border-light);
+            border-radius: 18px;
             transition: 0.3s;
         }
 
         .info-card:hover {
-            border-color: rgba(113, 212, 75, 0.4);
-            transform: translateY(-3px);
+            transform: translateY(-4px);
+            border-color: var(--border);
+            background: var(--card-hover);
         }
 
         .info-card small {
             display: block;
-            color: #777;
-            margin-bottom: 8px;
-            font-size: 12px;
+            color: var(--green);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            margin-bottom: 12px;
         }
 
         .info-card strong {
             display: block;
-            font-size: 18px;
+            font-size: 17px;
+            line-height: 1.5;
         }
 
         /* BOXING */
 
+        .boxing-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 30px;
+            margin-bottom: 45px;
+        }
+
         .boxing-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
+            gap: 15px;
         }
 
-        .stat-card {
-            background: #0d1113;
-            border: 1px solid #1b2022;
-            border-radius: 16px;
-            padding: 35px;
+        .boxing-card {
+            position: relative;
+            padding: 32px 27px;
+            min-height: 190px;
+            border-radius: 20px;
+            background: linear-gradient(145deg, #111711, #0b0f0b);
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+            transition: 0.3s;
         }
 
-        .stat-number {
-            font-size: 60px;
-            font-weight: 900;
-            color: #71d44b;
+        .boxing-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--border);
+        }
+
+        .boxing-card::after {
+            content: "";
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            right: -50px;
+            bottom: -55px;
+            border-radius: 50%;
+            background: rgba(105, 217, 111, 0.07);
+        }
+
+        .boxing-number {
+            font-size: 43px;
             line-height: 1;
-            margin-bottom: 15px;
+            font-weight: 900;
+            color: var(--green);
+            margin-bottom: 12px;
         }
 
-        .stat-title {
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .stat-description {
-            color: #777;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-
-        .boxing-text {
-            margin-top: 35px;
-            max-width: 750px;
-            color: #aaa;
+        .boxing-title {
             font-size: 17px;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+
+        .boxing-subtitle {
+            color: var(--muted);
+            font-size: 14px;
         }
 
         /* EDUCATION */
 
-        .timeline {
-            position: relative;
-            border-left: 2px solid #202629;
-            margin-left: 10px;
+        .education-list {
+            display: grid;
+            gap: 12px;
+            max-width: 850px;
         }
 
-        .timeline-item {
-            position: relative;
-            padding: 0 0 40px 35px;
+        .education-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 22px;
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.018);
+            transition: 0.25s;
         }
 
-        .timeline-item::before {
-            content: "";
-            position: absolute;
-            left: -7px;
-            top: 5px;
-            width: 12px;
-            height: 12px;
-            background: #71d44b;
-            border-radius: 50%;
-            box-shadow: 0 0 0 5px #080b0d;
+        .education-item:hover {
+            border-color: var(--border);
+            transform: translateX(4px);
         }
 
-        .timeline-item h3 {
-            font-size: 22px;
-            margin-bottom: 7px;
+        .education-number {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: rgba(105, 217, 111, 0.09);
+            color: var(--green);
+            font-weight: 800;
         }
 
-        .timeline-item p {
-            color: #777;
+        .education-item strong {
+            font-size: 16px;
+        }
+
+        .education-item span {
+            display: block;
+            color: var(--muted);
+            font-size: 13px;
+            margin-top: 3px;
         }
 
         /* EKOLIFE */
 
-        .ekolife-card {
-            background: linear-gradient(
-                135deg,
-                #101712,
-                #0d1113
-            );
-            border: 1px solid rgba(113,212,75,0.25);
-            border-radius: 20px;
-            padding: 50px;
+        .ekolife-box {
+            position: relative;
+            padding: 45px;
+            border-radius: 25px;
+            border: 1px solid var(--border);
+            background:
+                radial-gradient(circle at 90% 10%, rgba(105, 217, 111, 0.12), transparent 30%),
+                linear-gradient(145deg, #101610, #090c09);
+            overflow: hidden;
         }
 
-        .ekolife-card h3 {
-            font-size: 35px;
-            margin-bottom: 20px;
+        .ekolife-box h3 {
+            font-size: 32px;
+            margin-bottom: 15px;
         }
 
-        .ekolife-card p {
-            color: #aaa;
-            max-width: 750px;
+        .ekolife-box h3 span {
+            color: var(--green);
+        }
+
+        .ekolife-box p {
+            max-width: 760px;
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 28px;
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 12px 17px;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            background: rgba(255,255,255,0.025);
+            color: #dfe4df;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.25s;
+        }
+
+        .social-link:hover {
+            border-color: var(--green);
+            color: var(--green);
+            transform: translateY(-2px);
+        }
+
+        .social-icon {
+            color: var(--green);
             font-size: 17px;
-            margin-bottom: 30px;
-        }
-
-        .ekolife-link {
-            display: inline-block;
-            color: #71d44b;
-            font-weight: bold;
-            font-size: 17px;
-        }
-
-        .ekolife-link:hover {
-            text-decoration: underline;
         }
 
         /* CONTACT */
 
         .contact-box {
-            background: #0d1113;
-            border: 1px solid #1b2022;
-            border-radius: 18px;
-            padding: 45px;
-            text-align: center;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 25px;
         }
 
-        .contact-box p {
-            color: #888;
-            max-width: 600px;
-            margin: 0 auto 25px;
+        .contact-card {
+            padding: 30px;
+            border: 1px solid var(--border-light);
+            border-radius: 20px;
+            background: rgba(255,255,255,0.018);
         }
 
-        .social-placeholder {
-            color: #71d44b;
-            font-weight: bold;
+        .contact-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .contact-card p {
+            color: var(--muted);
+        }
+
+        .contact-highlight {
+            color: var(--green);
+            font-weight: 700;
         }
 
         /* FOOTER */
 
         footer {
-            border-top: 1px solid rgba(255,255,255,0.06);
-            padding: 30px 0;
-            text-align: center;
-            color: #555;
+            padding: 35px 0;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-inner p {
+            color: #737b75;
             font-size: 13px;
         }
 
-        /* MOBILE */
+        .footer-name {
+            color: #b9c0ba;
+            font-weight: 700;
+        }
 
-        @media (max-width: 700px) {
+        /* RESPONSIVE */
 
+        @media (max-width: 850px) {
             .nav-links {
                 display: none;
             }
 
             .hero {
-                min-height: 80vh;
+                min-height: auto;
             }
 
-            .hero h1 {
-                font-size: 55px;
+            .hero-content {
+                padding: 90px 0 75px;
+            }
+
+            h1 {
                 letter-spacing: -3px;
             }
 
-            .hero p {
-                font-size: 17px;
-            }
-
-            section {
-                padding: 75px 0;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-
+            .about-grid,
             .boxing-grid {
                 grid-template-columns: 1fr;
             }
 
-            .ekolife-card {
-                padding: 30px;
+            .contact-box {
+                grid-template-columns: 1fr;
             }
 
-            .ekolife-card h3 {
-                font-size: 28px;
+            .boxing-header {
+                display: block;
             }
         }
-        .about-description {
-    margin-top: 12px;
-    margin-bottom: 28px;
-    padding-left: 22px;
-    position: relative;
-    max-width: 850px;
-    font-size: 17px;
-    line-height: 1.7;
-    color: #b8b8b8;
-}
 
-.about-description::before {
-    content: "✦";
-    position: absolute;
-    left: 0;
-    top: 2px;
-    color: #65d66f;
-    font-size: 18px;
-}
+        @media (max-width: 600px) {
+            section {
+                padding: 75px 0;
+            }
+
+            .hero-content {
+                padding: 70px 0 65px;
+            }
+
+            h1 {
+                font-size: 58px;
+                letter-spacing: -3px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .ekolife-box {
+                padding: 28px 22px;
+            }
+
+            .ekolife-box h3 {
+                font-size: 27px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
     </style>
-<link rel="canonical" href="https://muslimxon-gulomov.github.io/">
-
-    <meta property="og:title" content="Муслимхон Гуломов — официальный личный сайт">
-<meta property="og:description" content="Официальный личный сайт Муслимхона Гуломова — биография, достижения, образование, проекты и личная информация.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://muslimxon-gulomov.github.io/">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Муслимхон Гуломов",
-  "url": "https://muslimxon-gulomov.github.io/",
-  "jobTitle": "Менеджер по продажам",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "EkoLife"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Алмалык",
-    "addressCountry": "UZ"
-  }
-}
-</script>
-    
 </head>
 
 <body>
@@ -464,9 +619,9 @@
     <nav>
         <div class="container nav-inner">
 
-            <div class="logo">
-                MG.
-            </div>
+            <a href="#top" class="logo">
+                Муслимхон <span>Гуломов</span>
+            </a>
 
             <ul class="nav-links">
                 <li><a href="#about">Обо мне</a></li>
@@ -479,347 +634,341 @@
         </div>
     </nav>
 
+    <main id="top">
 
-    <!-- HERO -->
+        <!-- HERO -->
 
-    <header class="hero">
+        <header class="hero">
 
-        <div class="container">
+            <div class="container">
 
-            <div class="hero-content">
+                <div class="hero-content">
 
-                <span class="badge">
-                    PERSONAL PORTFOLIO
-                </span>
+                    <div class="badge">
+                        OFFICIAL PERSONAL WEBSITE
+                    </div>
 
-                <h1>
-                    Муслимхон<br>
-                    <span>Гуломов</span>
-                </h1>
+                    <h1>
+                        Муслимхон<br>
+                        <span>Гуломов</span>
+                    </h1>
 
-                <p>
-                    Молодой спортсмен, боксёр и менеджер
-                    по продажам систем рекуперации воздуха EkoLife.
+                    <p class="hero-description">
+                        Молодой спортсмен, боксёр и менеджер по продажам
+                        систем рекуперации воздуха EkoLife.
+                    </p>
+
+                    <div class="buttons">
+                        <a href="#about" class="btn btn-primary">
+                            Узнать обо мне
+                        </a>
+
+                        <a href="#contact" class="btn btn-secondary">
+                            Контакты
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ABOUT -->
+
+        <section id="about">
+
+            <div class="container">
+
+                <div class="section-label">
+                    ABOUT ME
+                </div>
+
+                <h2>Обо мне</h2>
+
+                <p class="about-description">
+                    Муслимхон Гуломов — спортсмен, боксёр и менеджер по продажам
+                    систем рекуперации воздуха EkoLife. На этом официальном сайте
+                    собрана информация о его биографии, образовании, спортивных
+                    достижениях и профессиональной деятельности.
                 </p>
 
-                <div class="buttons">
+                <div class="about-grid">
 
-                    <a href="#about" class="btn btn-primary">
-                        Узнать обо мне
-                    </a>
-
-                    <a href="#boxing" class="btn btn-secondary">
-                        Мои достижения
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </header>
-
-
-    <!-- ABOUT -->
-
-    <section id="about">
-
-        <div class="container">
-
-            <div class="section-label">
-                ABOUT ME
-            </div>
-
-            <h2>
-                Обо мне
-            </h2>
-<p class="about-description">
-    Муслимхон Гуломов — спортсмен, боксёр и менеджер по продажам систем рекуперации воздуха EkoLife.
-    На этом официальном сайте собрана информация о его биографии, образовании, спортивных достижениях и профессиональной деятельности.
-</p>
-            <div class="about-grid">
-
-                <div class="info-card">
-                    <small>Имя</small>
-                    <strong>Муслимхон Гуломов</strong>
-                </div>
-
-                <div class="info-card">
-                    <small>Дата рождения</small>
-                    <strong>28 июля 2009 года</strong>
-                </div>
-
-                <div class="info-card">
-                    <small>Место рождения</small>
-                    <strong>Ташкент, Узбекистан</strong>
-                </div>
-
-                <div class="info-card">
-                    <small>Город проживания</small>
-                    <strong>Алмалык</strong>
-                </div>
-
-                <div class="info-card">
-                    <small>Семья</small>
-                    <strong>Сын Гуломова Уктамхона Гуломовича</strong>
-                </div>
-
-                <div class="info-card">
-                    <small>Деятельность</small>
-                    <strong>Менеджер по продажам</strong>
-                </div>
-
-                <div class="info-card">
-                    <small>Направление</small>
-                    <strong>Рекуператоры EkoLife</strong>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- BOXING -->
-
-    <section id="boxing">
-
-        <div class="container">
-
-            <div class="section-label">
-                BOXING
-            </div>
-
-            <h2>
-                Спортивные достижения
-            </h2>
-
-            <div class="boxing-grid">
-
-                <div class="stat-card">
-
-                    <div class="stat-number">
-                        2
+                    <div class="info-card">
+                        <small>Имя</small>
+                        <strong>Муслимхон Гуломов</strong>
                     </div>
 
-                    <div class="stat-title">
-                        1-е место
+                    <div class="info-card">
+                        <small>Дата рождения</small>
+                        <strong>28 июля 2009 года</strong>
                     </div>
 
-                    <div class="stat-description">
-                        Победы на соревнованиях
+                    <div class="info-card">
+                        <small>Место рождения</small>
+                        <strong>Ташкент, Узбекистан</strong>
                     </div>
 
-                </div>
-
-
-                <div class="stat-card">
-
-                    <div class="stat-number">
-                        3
+                    <div class="info-card">
+                        <small>Место проживания</small>
+                        <strong>Алмалык, Узбекистан</strong>
                     </div>
 
-                    <div class="stat-title">
-                        2-е место
+                    <div class="info-card">
+                        <small>Семья</small>
+                        <strong>Сын Гуломова Уктамхона Гуломовича</strong>
                     </div>
 
-                    <div class="stat-description">
-                        Призовые места
-                    </div>
-
-                </div>
-
-
-                <div class="stat-card">
-
-                    <div class="stat-number">
-                        72
-                    </div>
-
-                    <div class="stat-title">
-                        кг
-                    </div>
-
-                    <div class="stat-description">
-                        Весовая категория
+                    <div class="info-card">
+                        <small>Профессиональная деятельность</small>
+                        <strong>Менеджер по продажам систем рекуперации воздуха EkoLife</strong>
                     </div>
 
                 </div>
 
             </div>
 
-            <p class="boxing-text">
-                Бокс является важной частью моей жизни.
-                Я регулярно тренируюсь, участвую в соревнованиях
-                и продолжаю развиваться как спортсмен.
-            </p>
-
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- EDUCATION -->
+        <!-- BOXING -->
 
-    <section id="education">
+        <section id="boxing">
 
-        <div class="container">
+            <div class="container">
 
-            <div class="section-label">
-                EDUCATION
-            </div>
+                <div class="boxing-header">
 
-            <h2>
-                Образование
-            </h2>
+                    <div>
+                        <div class="section-label">
+                            BOXING
+                        </div>
 
-            <div class="timeline">
-
-                <div class="timeline-item">
-
-                    <h3>
-                        Школа №5
-                    </h3>
-
-                    <p>
-                        Обучение в школе №5.
-                    </p>
+                        <h2>Спортивные достижения</h2>
+                    </div>
 
                 </div>
 
+                <div class="boxing-grid">
 
-                <div class="timeline-item">
+                    <div class="boxing-card">
+                        <div class="boxing-number">2 раза</div>
+                        <div class="boxing-title">1-е место</div>
+                        <div class="boxing-subtitle">
+                            Победитель соревнований
+                        </div>
+                    </div>
 
-                    <h3>
-                        Школа №21
-                    </h3>
+                    <div class="boxing-card">
+                        <div class="boxing-number">3 раза</div>
+                        <div class="boxing-title">2-е место</div>
+                        <div class="boxing-subtitle">
+                            Призёр соревнований
+                        </div>
+                    </div>
 
-                    <p>
-                        Продолжение образования в школе №21.
-                    </p>
-
-                </div>
-
-
-                <div class="timeline-item">
-
-                    <h3>
-                        Школа №15
-                    </h3>
-
-                    <p>
-                        Обучение в школе №15.
-                    </p>
-
-                </div>
-
-
-                <div class="timeline-item">
-
-                    <h3>
-                        Частная школа в Бухаре
-                    </h3>
-
-                    <p>
-                        Продолжение обучения в частной школе города Бухары.
-                    </p>
+                    <div class="boxing-card">
+                        <div class="boxing-number">72 кг</div>
+                        <div class="boxing-title">Весовая категория</div>
+                        <div class="boxing-subtitle">
+                            Категория выступлений
+                        </div>
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- EKOLIFE -->
+        <!-- EDUCATION -->
 
-    <section id="ekolife">
+        <section id="education">
 
-        <div class="container">
+            <div class="container">
 
-            <div class="section-label">
-                WORK
-            </div>
+                <div class="section-label">
+                    EDUCATION
+                </div>
 
-            <h2>
-                EkoLife
-            </h2>
+                <h2>Образование</h2>
 
-            <div class="ekolife-card">
-
-                <h3>
-                    Менеджер по продажам
-                </h3>
-
-                <p>
-                    Работаю в направлении продажи рекуператоров EkoLife —
-                    систем, предназначенных для организации вентиляции
-                    и рекуперации воздуха.
+                <p class="section-intro">
+                    Учебные заведения, в которых проходило обучение.
                 </p>
 
-                <a
-                    href="https://ekolife.uz"
-                    target="_blank"
-                    class="ekolife-link"
-                >
-                    Перейти на EkoLife.uz →
-                </a>
+                <div class="education-list">
 
-            </div>
+                    <div class="education-item">
+                        <div class="education-number">01</div>
+                        <div>
+                            <strong>Школа №5</strong>
+                        </div>
+                    </div>
 
-        </div>
+                    <div class="education-item">
+                        <div class="education-number">02</div>
+                        <div>
+                            <strong>Школа №21</strong>
+                        </div>
+                    </div>
 
-    </section>
+                    <div class="education-item">
+                        <div class="education-number">03</div>
+                        <div>
+                            <strong>Школа №15</strong>
+                        </div>
+                    </div>
 
+                    <div class="education-item">
+                        <div class="education-number">04</div>
+                        <div>
+                            <strong>Частная «Бухарская школа»</strong>
+                            <span>Алмалык</span>
+                        </div>
+                    </div>
 
-    <!-- CONTACT -->
-
-    <section id="contact">
-
-        <div class="container">
-
-            <div class="section-label">
-                CONTACT
-            </div>
-
-            <h2>
-                Контакты
-            </h2>
-
-            <div class="contact-box">
-
-                <p>
-                    Социальные сети и дополнительные контакты
-                    будут добавлены позже.
-                </p>
-
-                <div class="social-placeholder">
-                    SOCIAL LINKS — COMING SOON
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
+
+        <!-- EKOLIFE -->
+
+        <section id="ekolife">
+
+            <div class="container">
+
+                <div class="section-label">
+                    EKOLIFE
+                </div>
+
+                <div class="ekolife-box">
+
+                    <h3>
+                        Профессиональная деятельность в <span>EkoLife</span>
+                    </h3>
+
+                    <p>
+                        Муслимхон Гуломов занимается продажами систем рекуперации
+                        воздуха EkoLife. Направление связано с современными решениями
+                        для вентиляции и создания комфортного воздуха в помещении.
+                    </p>
+
+                    <div class="social-links">
+
+                        <a
+                            class="social-link"
+                            href="https://t.me/ekolifeuzb"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span class="social-icon">✈</span>
+                            Telegram-канал EkoLife
+                        </a>
+
+                        <a
+                            class="social-link"
+                            href="https://www.instagram.com/ekolife.uz?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span class="social-icon">◎</span>
+                            Instagram EkoLife
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+
+        <section id="contact">
+
+            <div class="container">
+
+                <div class="section-label">
+                    CONTACT
+                </div>
+
+                <h2>Контакты</h2>
+
+                <p class="section-intro">
+                    Следить за профессиональной деятельностью EkoLife можно
+                    через официальные социальные площадки компании.
+                </p>
+
+                <div class="contact-box">
+
+                    <div class="contact-card">
+                        <h3>EkoLife</h3>
+                        <p>
+                            Система рекуперации воздуха и профессиональная
+                            деятельность в сфере современных вентиляционных решений.
+                        </p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>Социальные сети</h3>
+                        <p>
+                            <a
+                                href="https://t.me/ekolifeuzb"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-highlight"
+                            >
+                                Telegram-канал
+                            </a>
+                            <br>
+
+                            <a
+                                href="https://www.instagram.com/ekolife.uz?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-highlight"
+                            >
+                                Instagram
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
 
 
     <!-- FOOTER -->
 
     <footer>
 
-        <div class="container">
+        <div class="container footer-inner">
 
-            © 2026 Муслимхон Гуломов
+            <p>
+                © 2026
+                <span class="footer-name">Муслимхон Гуломов</span>
+            </p>
+
+            <p>
+                Официальный личный сайт
+            </p>
 
         </div>
 
     </footer>
-
 
 </body>
 </html>
